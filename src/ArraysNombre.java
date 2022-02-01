@@ -12,13 +12,13 @@ public class ArraysNombre {
     }
 
     private static String revertName(String word2) {
-        String name2result = "";
+        String result = "";
 
         for (int i = word2.length()-1; i >= 0 ; i--) {
 
-            name2result += word2.charAt(i);
+            result += word2.charAt(i);
         }
-        return name2result;
+        return result;
 
     }
 
