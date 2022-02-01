@@ -4,17 +4,40 @@ public class ArraysNombre {
 
     public static void main(String[] args) {
 
-        String [] nom1 = new String[nom1.length];
-        String [] nom2 = new String[nom2.length];
-        String nom1;
-        String nom2;
+        String word1 = askWordOne();
+        String word2 = askWordTwo();
+        word2 = revertName(word2);
+        System.out.println("Result: " + word1 + word2);
+
+    }
+
+    private static String revertName(String word2) {
+        String name2result = "";
+
+        for (int i = word2.length()-1; i >= 0 ; i--) {
+
+            name2result += word2.charAt(i);
+        }
+        return name2result;
+
+    }
+
+    private static String askWordTwo() {
         Scanner sc = new Scanner(System.in);
+        String word2 = "";
+        System.out.println("Introdueix un primer nom: " );
+        return  word2 = sc.nextLine();
+        
+        
+    }
 
+    private static String askWordOne() {
 
-            System.out.println("Introdueix un primer nom: " );
-            nom1 = sc.nextLine();
-            System.out.println("Introdueix un segon nom: " );
-            nom2 = sc.nextLine();
+        Scanner sc = new Scanner(System.in);
+        String word1 = "";
+        System.out.println("Introdueix un primer nom: " );
+        return  word1 = sc.nextLine();
+
     }
 
 
